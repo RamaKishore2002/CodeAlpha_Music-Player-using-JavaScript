@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Glow Music Player</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    >
+</head>
+<body>
+
+    <div class="player-container">
+
+        <div class="music-card">
+
+            <div class="track-art" id="art"></div>
+
+            <div class="track-details">
+                <h2 id="title">Song Title</h2>
+                <p id="artist">Artist Name</p>
+            </div>
+
+            <div class="slider-container">
+                <span id="current-time">0:00</span>
+
+                <input
+                    type="range"
+                    id="progress-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                >
+
+                <span id="duration">0:00</span>
+            </div>
+
+            <div class="controls">
+
+                <button id="prev-btn" class="ctrl-btn">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+
+                <button id="play-btn" class="ctrl-btn main-btn">
+                    <i class="fas fa-play"></i>
+                </button>
+
+                <button id="next-btn" class="ctrl-btn">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+
+            </div>
+
+            <div class="volume-container">
+
+                <i class="fas fa-volume-down"></i>
+
+                <input
+                    type="range"
+                    id="volume-slider"
+                    min="0"
+                    max="100"
+                    value="70"
+                >
+
+                <i class="fas fa-volume-up"></i>
+
+            </div>
+
+        </div>
+
+        <div class="playlist-card">
+
+            <h3>
+                <i class="fas fa-list-ul"></i>
+                Up Next
+            </h3>
+
+            <ul id="playlist-queue"></ul>
+
+        </div>
+
+    </div>
+
+    <audio id="main-audio"></audio>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
